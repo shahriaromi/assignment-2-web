@@ -39,6 +39,12 @@ header button {
   font-size: 20px;
   padding: 16px 25px;
   color: white;
+  transition: opacity 0.3s ease-out;
+}
+button:hover,
+.button-container a:hover {
+  opacity: 0.85;
+  /* background-color: #c40000; */
 }
 /* header */
 header {
@@ -46,12 +52,20 @@ header {
   border-radius: 30px;
   margin-top: 50px;
   margin-bottom: 130px;
+  overflow: hidden;
 }
 .header-container {
   display: flex;
 
   align-items: center;
   padding: 0 80px;
+}
+header img {
+  transition: transform 0.4s ease-out;
+}
+
+header img:hover {
+  transform: scale(1.07);
 }
 
 .header-container .text-content {
@@ -89,16 +103,22 @@ header {
   row-gap: 30px;
   padding: 30px;
 }
-#blog {
+
+#current-tab {
   background-color: #dd0000;
   color: white;
 }
 
-.section-2-container .button-container button {
+.section-2-container .button-container a {
+  text-align: center;
+  background-color: white;
+  color: #161616;
   padding: 17px 0px;
   font-size: 20px;
   font-weight: 500;
   border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.3s ease-out;
 }
 
 .transfer-container {
@@ -139,6 +159,9 @@ header {
 .transfer-container .text-content {
   padding: 20px;
 }
+.transfer-container .text-content-matches {
+  padding: 53px 30px;
+}
 
 /* footer */
 footer {
@@ -147,8 +170,8 @@ footer {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   gap: 50px;
 }
 footer h2 {
@@ -167,4 +190,12 @@ footer hr {
   width: 80%;
   border: none;
   border-top: 1px solid #ffffff1a;
+}
+footer i {
+  color: white;
+  font-size: 24px;
+  transition: opacity 0.3s ease-out;
+}
+footer i:hover {
+  opacity: 0.7;
 }
